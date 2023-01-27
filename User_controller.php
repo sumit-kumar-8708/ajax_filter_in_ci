@@ -40,5 +40,11 @@ class User extends CI_Controller
 		$this->load->view('users/user_list', $data);
 		$this->load->view('include/footer_new');
 	}
+	
+	public function reset_user_filter()
+	{
+		$_SESSION['user_filter'] = null;
+		redirect('user');
+	}
 
 ?>
